@@ -1,8 +1,4 @@
-########################################################
-# CircuitPython soundsq library
-#
-#
-
+import time
 import board
 import audioio
 import audiocore
@@ -12,11 +8,10 @@ import array
 class SND:
 	"""
 	The soundsq library duplicates the sound API in the CPX library with
-	sound based on a square wave rather than the built-in sine wave.
+	tones based on a square wave rather than the built-in sine wave.
 	This requires less overhead and results in higher performance
 	in most circumstances.
 	"""
-
 	def __init__(self):
 		self._volume = 14
 		self._speaker_enable = digitalio.DigitalInOut(board.SPEAKER_ENABLE)
